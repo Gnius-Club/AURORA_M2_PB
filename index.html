@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- NEW: html2canvas library for screenshots -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
     <!-- Tutorial Modal -->
@@ -69,11 +71,12 @@
                 <div class="victory-stats">
                     <div class="stat-item">✅ 3 Niveles Completados</div>
                     <div class="stat-item">🏆 3 Metas Alcanzadas</div>
-                    <!-- NEW: Final time display -->
-                    <div class="stat-item" id="final-time">⏱️ Tiempo Total: --:--</div>
+                    <div class="stat-item" id="final-time">⏱️ Tiempo Total: --:--:--</div>
                 </div>
             </div>
             <div class="victory-footer">
+                <!-- NEW: Screenshot button -->
+                <button id="download-victory-screenshot" class="btn btn--outline">📸 Descargar Victoria</button>
                 <button id="play-again" class="btn btn--primary btn--large">¡Jugar de Nuevo!</button>
             </div>
         </div>
@@ -88,7 +91,7 @@
                     <span id="current-level">NIVEL 1</span> - <span id="level-name">Ruta de Calibración</span>
                 </div>
                  <!-- Cronómetro de Misión -->
-                <div id="stopwatch" class="stopwatch">00:00</div>
+                <div id="stopwatch" class="stopwatch">00:00:00</div>
                 <div class="mission-progress">
                     <span id="objectives-progress">Objetivo: Llega a 🏆</span> |
                     <span id="steps-count">Pasos: 0/15</span>
